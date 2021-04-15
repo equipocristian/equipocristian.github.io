@@ -1,0 +1,307 @@
+/* Variables */
+
+:root {
+    --margenDeSecciones: 70px;
+    --colorDeFondo: #1A1A1A;
+    --wrapper: 10vw;
+}
+
+/* Variables */
+
+
+
+/* Globales */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 55px; /* Cambiar el espacio que hay entre los renglones */ 
+    text-transform: uppercase; /* Transformar el texto y colocarlo todo en mayúsculas */
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Globales */
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 70px;
+    -webkit-box-shadow: 0px 2px 8px 6px rgba(0,0,0,0.3); 
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center; /* Alinear verticalmente con display flex */
+    justify-content: center; /* Alinear horizontamlmente con display flex */
+    position: fixed; /* Con esta declaración logramos que el header nos siga */
+    top: 0; /* Con position FIXED, el top 0 nos ayuda a pegar el header en la parte superior */
+    left: 0; /* Con position FIXED, el left 0 nos ayuda a pegar el header a la izquierda */
+    background-color: white;
+}
+
+/* Header */
+
+
+/* Main */
+
+main {
+    margin-top: 100px;
+}
+
+main .main__text {
+    margin: 30px 30px;
+}
+
+main .main__text h1 {
+    margin-bottom: 10px;
+}
+
+main .main__text h2 {
+    color: #ccc;
+}
+
+main .main__text h1, h2 {
+    font-weight: 700;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+main figure {
+    display: flex; /* Activamos display FLEX para poder alinear el contenido del figure */
+    justify-content: center; /* Alineación horizontal del contenido del figure al centro */
+}
+
+
+/* Main */
+
+
+/* Sobre mí / About Me */
+
+.aboutMe {
+    background-color: var(--colorDeFondo);
+    color: white;
+    padding: 50px 0; /* Top y bottom, left y rigth */
+}
+
+
+.aboutMe__cardContainer--item {
+    width: 300px;
+    height: 200px;
+    text-align: left;
+    box-sizing: border-box; /* Esto es equivalente a OBJECT-FIT, pero éste sirve para contenedores */
+    padding: 80px 20px 0 20px; /* Top, right, bottom, left*/
+    margin: 50px auto;
+    background-image: linear-gradient(
+        rgba(0, 194, 255, .5),
+        rgba(0, 194, 255, .5)
+    ), url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    border-radius: 20px;
+    background-position: 0% 90%;
+}
+
+#item2 {
+    background-image: linear-gradient(
+        rgba(255, 0, 196, .5),
+        rgba(255, 0, 196, .5)
+    ), url("https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+#item3 {
+    background-image: linear-gradient(
+        rgba(34, 194, 98, .5),
+        rgba(34, 194, 98, .5)
+    ), url("https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+}
+
+.aboutMe__cardContainer--item p {
+    margin-top: 10px;
+}
+
+/* Sobre mí / About Me */
+
+
+/* Education */
+
+.education {
+    margin: var(--margenDeSecciones) var(--wrapper) 0; /* Primer valor: top; segundo valor: left y rigth; tercer valor: bottom. */
+}
+
+.education h1 {
+    margin-bottom: 20px;
+}
+
+.education .education__cardContainer {
+    margin-top: 30px;
+}
+
+.education .education__cardContainer .education__cardContainer--item {
+    width: 130px;
+    height: 200px;
+    background-color: #E6E6E6;
+    border-radius: 20px;
+    display: inline-flex; /* Activamos display flex para alinear/ordenar el contenido */
+    flex-direction: column; /* Cambiamos el display ROW por defecto, a COLUMN */
+    justify-content: center; /* Con COLUMN, esta propiedad alinea verticalmente */
+    align-items: center; /* Con COLUMN, esta propiedad alinea horizontalmente */
+    margin: 0 10px 10px 0 /* Top, right, bottom, left */
+}
+
+.education .education__cardContainer .education__cardContainer--item img {
+    margin-bottom: 10px;
+}
+
+/* Education */
+
+
+/* Skills */
+
+.skills {
+    background-color: var(--colorDeFondo);
+    padding: var(--margenDeSecciones) 0; /* Top y bottom, left y right */
+    color: white;
+}
+
+.skills .skills__container {
+    margin: 50px var(--wrapper); /* Primer valor: top y bottom; segundo valor: rigth y left* */
+}
+
+
+.skills .skills__container .skills__container--item {
+    margin: 20px 0; /* Primer valor: top y bottom; segundo valor: rigth y left* */
+    display: flex; /* En este caso, display FLEX permite colocar los elementos ordenados en filas */
+    align-items: center; /* Con display FLEX, alinear el contenido verticalmente al centro */
+    justify-content: space-between; /* Con display FLEX, alineamos el contenido horizontalmente al centro */
+}
+
+.skills .skills__container .skills__container--item .skills__container--item__whiteContainer {
+    width: 220px;
+    height: 30px;
+    background-color: white;
+}
+
+.skills .skills__container .skills__container--item .skills__container--item__greenContainer {
+    height: 100%;
+    background-color: #73FE52;
+}
+
+#skills__container--item__greenContainer--english {
+    width: 25%;
+}
+
+#skills__container--item__greenContainer--item3 {
+    width: 50%;
+}
+
+#item4 {
+    width: 86.5%;
+}
+
+
+/* Skills */
+
+
+
+/* Hobbies */
+
+.hobbies {
+    margin-top: var(--margenDeSecciones);
+}
+
+.hobbies .hobbies__scroll {
+    overflow: scroll; /* Hacer scroll horizontall */
+}
+
+.hobbies .hobbies__container {
+    padding: 50px 0; 
+    display: inline-flex; /* Alinear el contenido horziontalmente en filas */
+    margin: 0 var(--wrapper);
+}
+
+.hobbies .hobbies__container .hobbies__container--item {
+    margin-right: 50px;
+}
+
+.hobbies .hobbies__container .hobbies__container--item img {
+    margin-bottom: 20px; 
+}
+
+
+
+/* Hobbies */
+
+
+/* Footer */
+
+footer {
+    background-color: var(--colorDeFondo);
+    padding: var(--margenDeSecciones) 0;
+    margin-top: var(--margenDeSecciones);
+    color: white;
+}
+
+footer .footer__socialMedia {
+    padding: 50px 0;
+    margin: 0 var(--wrapper);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer__socialMedia .footer__socialMedia--item {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* Con display FLEX, alinear el contenido verticalmente al centro */
+    justify-content: center; /* Con display FLEX, alineamos el contenido horizontalmente al centro */
+}
+
+footer .footer__socialMedia .footer__socialMedia--item img {
+    width: 40px;
+    object-fit: cover;
+}
+
+#fb {
+    width: initial; /* Resetea a sus propiedades originales */
+    height: 40px;
+}
+
+#footer__socialMedia--item__whats {
+    border: 2px solid #61F22D;
+}
+#footer__socialMedia--item__fb {
+    border: 2px solid #3D81F5;
+}
+#footer__socialMedia--item__tw {
+    border: 2px solid #3DDCF5;
+}
+#footer__socialMedia--item__ig {
+    border: 2px solid #C85EE1;
+}
+
+
+
+/* Footer */
